@@ -35,8 +35,12 @@ export default function Home() {
 
               </form>
         </aside>
-        <div className='w-full bg-white rounded-md p-2'>
-            <JobList list={jobPosts} />
+        <div className='w-full bg-white rounded-md p-2 grid grid-cols-2'>
+          
+            <JobList className='w-full' list={jobPosts} />
+            <div className='h-32 w-full fade-left bg-red-400'>
+            
+          </div>
         </div>
       </div>
     </main>
