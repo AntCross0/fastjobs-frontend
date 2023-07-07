@@ -1,3 +1,5 @@
+import { JobList } from '@/components/JobList'
+import { jobPosts } from '@/data/jobPosts'
 import Image from 'next/image'
 
 export default function Home() {
@@ -26,7 +28,7 @@ export default function Home() {
               <form className='relative flex flex-col justify-start mx-auto w-full gap-2 border-2 rounded'>
                 <label className='mx-2 absolute bg-white bottom-4 px-2 font-medium text-md'>Job type</label>
                 <div className='inline space-x-2'>
-                <input type='checkbox' className='place-self-start ml-8 '></input>
+                <input type='checkbox' className='place-self-start ml-8'></input>
                 <label className=''>Full time</label>
                 </div>
                 
@@ -34,7 +36,7 @@ export default function Home() {
               </form>
         </aside>
         <div className='w-full bg-white rounded-md p-2'>
-
+            <JobList list={jobPosts} />
         </div>
       </div>
     </main>
